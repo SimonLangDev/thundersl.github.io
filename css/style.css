@@ -1,8 +1,3 @@
-/* Bootrap button */
-.btn {
-  text-transform: none;
-  font-size: 16px;
-}
 /***************/
 /* Text styles */
 /***************/
@@ -28,11 +23,23 @@
   margin: 0 auto;
 }
 .background {
+  display: table;
   height: 100vh;
-  width: inherit;
+  width: 100%;
 }
+/*********************/
+/* Navigation styles */
+/*********************/
+.navigation {
+  display: table-row;
+  background-color: #6bb4d5;
+}
+/****************/
+/* Cover styles */
+/****************/
 #cover {
   background-image: url("../images/cover.png");
+  display: table-row;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -44,18 +51,20 @@
   opacity: 0.9;
   height: inherit;
 }
+/******************/
+/* Profile styles */
+/******************/
 #profile {
-  width: 16%;
-  height: 16%;
-  min-width: 256px;
-  min-height: 256px;
+  width: 192px;
+  height: 192px;
   border-radius: 50%;
-  margin-top: 32px;
   margin-bottom: 48px;
 }
+/***********************/
+/* Social icons styles */
+/***********************/
 .social-icons-container {
   margin-top: 48px;
-  margin-bottom: 48px;
 }
 .social-icon {
   color: white;
@@ -63,53 +72,68 @@
   margin-left: 24px;
   margin-right: 24px;
 }
-#website-navigation {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 32px;
-  background-color: #80d8ff;
+.container {
+  min-height: 6em;
+  position: relative;
 }
-/*Mobile*/
-@media (max-width: 768px) {
-  #screensize-min-768 {
-    display: none;
+.center-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.center-area:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*Mobile portrait*/
+@media (max-width: 1024px) {
+  #profile {
+    width: 192px;
+    height: 192px;
+    margin-bottom: 64px;
   }
-  #website-navigation {
-    padding: 16px;
+  .t1 {
+    font-size: 48px;
   }
-  .website-button {
-    min-width: 128px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+  .t2 {
+    font-size: 24px;
+  }
+  .social-icons-container {
+    margin-top: 48px;
+  }
+  .social-icon {
+    font-size: 24px;
     margin-left: 16px;
     margin-right: 16px;
   }
 }
 /*Dektop*/
-@media (min-width: 768px) {
-  #screensize-max-768 {
-    display: none;
+@media (min-width: 1024px) and (min-height: 768px) {
+  #profile {
+    width: 256px;
+    height: 256px;
+    margin-bottom: 96px;
   }
-  .website-button {
-    min-width: 128px;
-    margin-left: 16px;
-    margin-right: 16px;
+  .t1 {
+    font-size: 64px;
   }
-}
-@media (min-height: 800px) and (max-height: 831px) {
-  #user {
-    padding-top: 24px;
+  .t2 {
+    font-size: 32px;
   }
-}
-@media (min-height: 832px) and (max-height: 863px) {
-  #user {
-    padding-top: 48px;
+  .social-icons-container {
+    margin-top: 64px;
   }
-}
-@media (min-height: 864px) {
-  #user {
-    padding-top: 96px;
+  .social-icon {
+    font-size: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }
