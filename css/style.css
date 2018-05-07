@@ -55,17 +55,17 @@
 /* Profile styles */
 /******************/
 #profile {
-  width: 192px;
-  height: 192px;
-  border-radius: 50%;
+  width: 256px;
+  height: 256px;
   margin-top: 48px;
-  margin-bottom: 48px;
+  margin-bottom: 96px;
+  border-radius: 50%;
 }
 /***********************/
 /* Social icons styles */
 /***********************/
 .social-icons-container {
-  margin-top: 48px;
+  margin-top: 64px;
 }
 .social-icon {
   color: white;
@@ -94,8 +94,7 @@
   display: inline-block;
   vertical-align: middle;
 }
-/*Mobile portrait*/
-@media (max-width: 1023px) or (max-height: 767px) {
+@media only screen and (max-width: 1023px), (max-height: 767px) {
   #profile {
     width: 192px;
     height: 192px;
@@ -115,28 +114,5 @@
     font-size: 24px;
     margin-left: 16px;
     margin-right: 16px;
-  }
-}
-/*Dektop*/
-@media (min-width: 1024px) and (min-height: 768px) {
-  #profile {
-    width: 256px;
-    height: 256px;
-    margin-top: 48px;
-    margin-bottom: 96px;
-  }
-  .t1 {
-    font-size: 64px;
-  }
-  .t2 {
-    font-size: 32px;
-  }
-  .social-icons-container {
-    margin-top: 64px;
-  }
-  .social-icon {
-    font-size: 32px;
-    margin-left: 24px;
-    margin-right: 24px;
   }
 }
