@@ -23,6 +23,7 @@
   margin: 0 auto;
 }
 .background {
+  overflow: hidden;
   display: table;
   height: 100vh;
   width: 100%;
